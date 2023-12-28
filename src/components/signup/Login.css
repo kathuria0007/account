@@ -1,0 +1,75 @@
+@media(max-width:768px) {
+    .edit-profile {
+        background-color: #130D33;
+        width: 300px !important;
+    }
+
+    .forgot {
+        font-size: 20px;
+    }
+}
+input {
+
+        padding: 20px;
+        background: transparent;
+        font-size: 16px;
+        margin-top: 10px;
+        color: #fff;
+
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+    }
+
+    .btn-default {
+        font-size: 36px;
+    }
+.file {
+    width: 175px;
+    height: 175px;
+    border-radius: 20px;
+
+    input {
+        z-index: 1;
+        position: absolute;
+        font-size: 0;
+        width: 27px;
+        height: 27px;
+        opacity: 0;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+
+    i {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &-btn {
+        position: relative;
+        top: 10px;
+        right: 10px;
+    }
+
+}
+
+.font_family {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.passeye {
+    color: #fff;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.passeye svg {
+    width: 20px;
+    height: 20px;
+}

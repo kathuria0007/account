@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons / Arrows / Back">
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M41.0785 21.8977L32.4021 13.0762L29.1876 16.2379L34.0917 21.2241L6.50005 21.2241L6.50005 25.7328L34.0919 25.7328L29.1875 30.7192L32.4021 33.8809L41.0785 25.0594C41.9413 24.1821 41.9413 22.775 41.0785 21.8977Z" fill="url(#paint0_linear_940_13876)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_940_13876" x1="41.7256" y1="13.0762" x2="21.1064" y2="43.7117" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF817D"/>
+<stop offset="0.463542" stop-color="#8233FF"/>
+<stop offset="0.630208" stop-color="#3857FD"/>
+<stop offset="1" stop-color="#22DEF1"/>
+</linearGradient>
+</defs>
+</svg>

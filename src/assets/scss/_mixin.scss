@@ -1,0 +1,36 @@
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin color-opacity($color, $opacity: 0.3) {
+    background: rgba($color, $opacity);
+}  
+
+@mixin transition($transition, $type:ease-in-out) {
+    
+	-webkit-transition: $transition $type;
+	-moz-transition: $transition $type;
+	-ms-transition: $transition $type;
+	transition: $transition $type;
+} 
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+       -moz-box-shadow: $shadow;       
+            box-shadow: $shadow;
+  }
+
+  @mixin text-shadow($shadow...) {
+    -webkit-text-shadow: $shadow;
+       -moz-text-shadow: $shadow;       
+            text-shadow: $shadow;
+  }
+  

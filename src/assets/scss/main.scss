@@ -1,0 +1,172 @@
+@import '../scss/mixin';
+@import '../scss/color';
+@import '../scss/responsive';
+
+a{
+    text-decoration: none;
+}
+.pt-head{
+    padding-top: 10rem;
+}
+.py-equal{
+    padding:50px 0px;
+}
+@media(min-width:767px){
+    .py-equal{
+        padding:100px 0px;
+    }
+} 
+
+.wj-flexchart{
+    border:none;
+}
+
+.shadow-0{
+    box-shadow: none !important;
+}
+
+
+
+.toggle-button-cover {
+
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .button-cover {
+
+  }
+  
+//   .button-cover:before {
+//     counter-increment: button-counter;
+//     content: counter(button-counter);
+//     position: absolute;
+//     right: 0;
+//     bottom: 0;
+//     color: #d7e3e3;
+//     font-size: 12px;
+//     line-height: 1;
+//     padding: 5px;
+//   }
+  
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+   
+  }
+  
+  .button-switch {
+    position: relative;
+    top: 50%;
+    width: 100px;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+    @media(max-width:$breakpoint-mobile){
+        margin-bottom: 10px;
+    }
+  }
+  
+  .button-switch.r,
+  .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  .button-switch.b2 {
+    border-radius: 2px;
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: transparent;
+    transition: 0.3s ease all;
+    z-index: 1;
+    border: 2px solid #fff;
+    border-radius: 10px;
+  }
+  
+  /* Button 1 */
+ .button-switch .knobs:before {
+    
+    font-family: 'icomoon';
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 45px;
+    height: 45px;   
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    font-size: 20px;
+    padding: 9px 4px;
+    background-color: #fff;
+    color:#ccc;
+    border-radius: 10px;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-switch .knobs.twitter:before{
+    content: "\e901";
+  }
+ .button-switch .checkbox:checked + .knobs:before {
+    // content: "NO";
+    color:rgba(130,51,255,1);
+    left: 50px;
+    background: #fff;
+  }
+  
+ .button-switch .checkbox:checked ~ .layer {
+    background: linear-gradient(29deg, rgba(255,129,125,1) 0%, rgba(130,51,255,1) 37%, rgba(56,87,253,1) 73%, rgba(34,222,241,1) 100%);
+    border:none;
+  }
+  
+ .button-switch .knobs,
+ .button-switch .knobs:before,
+ .button-switch .layer {
+    transition: 0.3s ease all;
+  }
+  .button-switch .knobs.discord:before{
+    content: "\e900";
+  }
+
+  .button-switch .knobs.checkicon:before{
+    content: "\f00c";
+    font: normal normal normal 14px/1 FontAwesome;
+  }
+
+  .cursor-pointer{
+    cursor: pointer;
+  }
+
+  .form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: url(../images/checkbox-icon.svg);
+}
+
+
+.form-check-input:checked {
+  background-color: white;
+  border-color: white;
+  filter: drop-shadow(1px 7px 12px #F37484);
+}

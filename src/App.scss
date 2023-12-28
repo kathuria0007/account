@@ -1,0 +1,241 @@
+@import 'assets/fonts/stylesheet';
+@import 'assets/scss/main.scss';
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: azonixregular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.loader {
+  background-color: black;
+}
+
+.loader .modal-content {
+  border: 0px;
+}
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  color: #000;
+}
+
+.bg-gadient{
+  background: linear-gradient(29deg, rgba(255,129,125,1) 0%, rgba(130,51,255,1) 37%, rgba(56,87,253,1) 73%, rgba(34,222,241,1) 100%);
+
+}
+.text-gradient{
+  background: linear-gradient(49deg, #FF817D 0%, #8233FF 46.35%, #3857FD 63.02%, #22DEF1 100%);
+  background-clip: text;
+
+
+}
+.text-gray{
+  color:$color-gray;
+}
+.text-cyan{
+  color:$color-cyan;
+}
+img{
+  max-width: 100%;
+}
+.btn-default{
+  background-color: $color-white;
+  padding: 20px 30px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  @include transition(0.3s);
+  @include box-shadow(0px 32px 56px 0px #7841ED, 0px 24px 24px 0px rgba(56, 147, 232, 0.25), 0px 16px 16px 0px rgba(243, 116, 132, 0.40));
+&:hover{
+  @include color-opacity($color-white, 0.9);
+}
+  &-text{
+      background: linear-gradient(49deg, #FF817D 0%, #8233FF 46.35%, #3857FD 63.02%, #22DEF1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+}
+.bg-dark-1{
+  background-color: $color-dark-blue;
+}
+.bg-blue{
+  background-color: $color-blue;
+}
+.text-stroke{
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #35D2E2;
+}
+.heading-element{
+  h2{
+    font-size:42px;
+    @media(min-width:$breakpoint-tablet-vertical){
+      font-size:54px;
+  }
+   
+  }
+  &-inner h4{
+    span.text-gradient{
+      font-size: 3rem;
+    }
+    font-size:3rem;
+    @media(min-width:$breakpoint-tablet-vertical){
+      font-size:1.5rem;
+  }
+    
+  }
+}
+.text-shadow{
+  @include text-shadow( 0px 0px 64px $color-light);
+}
+
+.countdown{
+  &-outer{
+  max-width: 220px;
+  padding: 10px;
+  font-family: 'digital-7_monomono';
+}
+&-inner{
+  width: 100%;
+  height: 100%;
+  padding: 5px 0px;
+  span{
+    font-size: 34px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--bs-border-radius-xl);
+    background: #070123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include box-shadow(0px 2px 0px rgba(85, 84, 84, 0.4), 0px -2px 0px rgba(85, 84, 84, 0.4));
+    padding: 10px 0px;
+  }
+}
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255,255,255,0.6) !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255,255,255,0.6);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255,255,255,0.6);
+}
+.accordion-button{
+  background-color: transparent;
+  outline: none;
+  box-shadow: none !important;
+  color:#fff;
+  font-size:24px;
+}
+.accordion-item{
+  background-color: transparent;
+  color:#fff;
+  border-top: 1px solid #fff;
+  border-left: 0;
+  border-right: 0;
+  padding: 20px 0px;
+}
+.accordion-button:not(.collapsed){
+  background-color: transparent;
+  background: linear-gradient(49deg, #FF817D 0%, #8233FF 46.35%, #3857FD 63.02%, #22DEF1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.accordion-item{
+  border-top:1px solid #fff;
+  color:#fff
+}
+.accordion-item:first-of-type{
+  border-radius: 0;
+  box-shadow: none !important;
+}
+.accordion-body{
+  border-top:0px;
+}
+
+.accordion-item button::after{
+  background-color: #fff !important;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-position: 5px 7px;
+}
+
+.form-check-input:checked {
+  background-color: white;
+  border-color: white;
+  filter: drop-shadow(1px 7px 12px #F37484);
+}
+
+
+.form-check-input:checked[type=checkbox] {
+  --bs-form-check-bg-image: url(./assets/images/checkbox-icon.svg);
+}
+
+.battle-enter-area{
+  padding: 3px;
+}
+
+
+.text-color{
+  color: #000;
+}
+
+.btn-width{
+  padding: 10px 10px 10px 10px;
+}
+
+.btn-width2{
+  width: 200px; 
+  padding: 10px 10px 10px 10px;
+}

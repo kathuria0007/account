@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="symbol / Dogecoin">
+<path id="Vector" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="url(#paint0_linear_1436_15769)"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M18.4394 8.84834C18.0949 7.90442 17.5427 7.06229 16.8291 6.39266C16.1155 5.72303 15.2615 5.24544 14.3387 5H6L6.03739 8.30427H7.69515V15.6957H6V19H14.1018C16.0587 19 17.6293 16.9033 17.6293 16.9033C20.1346 13.1213 18.4394 8.84834 18.4394 8.84834ZM14.1517 14.6872C14.1517 14.6872 13.516 15.6559 12.818 15.6559H11.4345L11.4095 8.31754H13.1795C13.1795 8.31754 14.0021 8.50332 14.5755 10.2284C14.5755 10.2284 15.3358 12.71 14.1517 14.6872Z" fill="white" fill-opacity="0.8"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1436_15769" x1="4.47035e-07" y1="24" x2="25.4573" y2="1.66075" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF817D"/>
+<stop offset="0.463542" stop-color="#8233FF"/>
+<stop offset="0.630208" stop-color="#3857FD"/>
+<stop offset="1" stop-color="#22DEF1"/>
+</linearGradient>
+</defs>
+</svg>
