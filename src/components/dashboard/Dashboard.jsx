@@ -10,7 +10,7 @@ export default function Dashboard() {
 
   const [userLocation, setUserLocation] = useState(null);
   const [worklist, setworklist] = useState([]);
-
+  
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
@@ -111,24 +111,16 @@ export default function Dashboard() {
   // const handleFileChange = (event) => {
   //   formik.setFieldValue('profilePicture', event.currentTarget.files[0]);
   // };
-  async function list()
-  {
-      try {
-        let response = await axios.get(`http://localhost:8007/api/client/getusers?exportRequest=false`);
-        console.log(response.data.data.items);
-        if (response.status === 200) {
-          setworklist(response.data.data.items);
-        } else {
-          toast.error("Failed to fetch data!");
-        }
-      } catch (error) {
-        toast.error("Something went wrong!");
-      }
+  async function getworkhandler(){
+    let token = localStorage.getItem('accessToken');
+    const response=await axios.get(`http://localhost:8007/api/client/getmywork`, {
+      headers: {
+        authorization: token,
+        accept: 'application/json',
+      }})
+    setworklist(response.data.data)
   }
-  useEffect(() => {
-    list();
-  }, []);
-
+  
   const downloadUsersCsv = async () => {
     try {
       let response = await axios.get(
@@ -150,7 +142,9 @@ export default function Dashboard() {
     <div className="container mt-5 bh-50" >
       <div className="row justify-content-center">
         <div className="col-md-6 text-gradient">
-       
+        <div>
+          <button className='btn btn-default new-btn mt-3 btn-width' onClick={getworkhandler}>Get my Work</button>
+        </div>
           <form onSubmit={formik.handleSubmit} className="border p-4 rounded bg-gradient">
             <div className="mb-3 text-start text-color ">
               <label className="form-label fw-bolder text-color">First Name</label>
@@ -164,7 +158,6 @@ export default function Dashboard() {
               />
               {formik.touched.firstname && formik.errors.firstname && (<div className="invalid-feedback">{formik.errors.firstname}</div>)}
             </div>
-
             <div className="mb-3 text-start ">
               <label className="form-label fw-bolder text-color">Last Name</label>
               <input
@@ -281,34 +274,31 @@ export default function Dashboard() {
       
       <div className="col-md-6 text-gradient">
           <div className='col-md-2'>
-            <button className='btn btn-default btn-width2' onClick={list}>
-              <span className='h5'> Subscribed users </span>
-            </button>
           </div>
           <table className="table table-dark border border-1">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">FirstName</th>
-                <th scope="col">LastName</th>
-                <th scope="col">Email</th>
-                <th scope="col">Father's Name</th>
-                <th scope="col">Age</th>
-                <th scope="col">City</th>
-                <th scope="col">PinCode</th>
+                <th scope="col">Labourfirstname</th>
+                <th scope="col">LabourLastName</th>
+                <th scope="col">Nameofclient</th>
+                <th scope="col">ClientLocation</th>
+                <th scope="col">ClientPincode</th>
+                <th scope="col">ClientCity</th>
+                <th scope="col">StatusOfWork</th>
               </tr>
             </thead>
             <tbody>
               {worklist.map((item, index) => (
                 <tr key={index}>
                   <td scope="row">{index + 1}</td>
-                  <td>{item.firstname}</td>
-                  <td>{item.lastname}</td>
-                  <td>{item.email}</td>
-                  <td>{item.fathername}</td>
-                  <td>{item.age}</td>
-                  <td>{item.city}</td>
-                  <td>{item.pincode}</td>
+                  <td>{item.labourfirstname}</td>
+                  <td>{item.labourlastname}</td>
+                  <td>{item.nameofclient}</td>
+                  <td>{item.clientlocation}</td>
+                  <td>{item.clientpincode}</td>
+                  <td>{item.clientcity}</td>
+                  <td>{item.statusofwork}</td>
                 </tr>
               ))}
             </tbody>

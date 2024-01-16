@@ -6,6 +6,8 @@ import Signup from "./components/signup/Signup.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./components/dashboard/Dashboard.jsx";
 import login from "./components/login/login.jsx";
+import admin from "./components/admin/Admin.jsx";
+import Addwork from "./components/admin/Addwork.jsx";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/listusers" Component={Listusers}></Route>
           <Route path="/login" Component={login}></Route>
           <Route path="/dashboard" Component={Dashboard}></Route>
+          <Route path="/adminpanel" Component={admin}></Route>
+          <Route path="/addwork" Component={Addwork}></Route>
         </Routes>
       </BrowserRouter>
     </div>
